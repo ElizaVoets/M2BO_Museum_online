@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+
+/* Top bar */
+header{
+    position: sticky;
+    padding: 25px;
+    background-color: #141414;
+}
+
