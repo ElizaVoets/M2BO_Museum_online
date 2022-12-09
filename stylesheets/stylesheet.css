@@ -20,75 +20,11 @@ header{
     padding: 5px;
 }
 
-.navbar{
-    position: fixed;
-    right: 0px; 
-    width: 350px;
-    height: 100%;
-    background-color: #141414;
-    transition: 0.5s;
-}
-
-nav{
-    position: absolute;
-    top: 100px;
-    right: 50px;
-    width: 250px;
-}
-
-.navbar ul li{
-    color: #fafafa;
-    text-align: right;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    padding: 20px 30px;
-    border-bottom: 1pt solid #2d2d2d;
-    text-align: center;
-}
-
-.navbar ul li a{
-    color: #fafafa;
-    transition: 0.5s;
-}
-
-.navbar ul li a:hover{
-    color: #ff9823;
-    transition: 0.5s;
-}
-
-
-/* hamburger button */
-.hamburger, .bar{
-    position: fixed;
-    right: 5px;
-    top: 5px;
-}
-
-.hamburger{
+.bannerElement{
     display: block;
-    top: 5%;
-    left: 95%;
-    width: 30px;
-    height: 30px;
-    transform: translateY(-50%);
-    border: 0;
-    background: 0 0;
+    background-color: #6d6d6d;
+    width: 100%;
+    height: 550px;
+
+
 }
-
-
-.bar{
-    top: 3px;
-    background: #fafafa;
-    width: 30px;
-    height: 4px;
-    transition: all .3s ease-in;
-}
-
-#bar2{
-    top: 11px;
-}
-
-#bar3{
-    top: 19px;
-}
-
