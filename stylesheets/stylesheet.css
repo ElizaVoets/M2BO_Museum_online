@@ -1,30 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+html{
+    height: 100%;
+}
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    text-decoration: none;
-    list-style: none;
 }
+ 
 
 /* body */
 body{
     background-color: #323232;
+    min-height: 100vh;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 /* Top bar */
 header{
-    background-color: #141414;
-    padding: 5px;
+    position: relative;
+    background-color: #131313;
+    height: 55px;
+    margin: 0;
 }
 
-.bannerElement{
+.hamburger{
     display: block;
-    background-color: #6d6d6d;
-    width: 100%;
-    height: 550px;
-
-
+    top: 4.25%;
+    left: 95%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
 }
+
+.hamburger, .bar{
+    position: fixed;
+}
+
+.bar{
+    top: 3px;
+    background: #fafafa;
+    width: 100%;
+    height: 4px;
+    transition: all .3s ease-in;
+}
+
+#bar2{
+    top: 11px;
+}
+
+#bar3{
+    top: 19px;
+}
+
+.hamburger.open #bar1{
+    background-color: #fafafa;
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.open #bar2{
+    background-color: transparent;
+}
+
+.hamburger.open #bar3{
+    background-color: #fafafa;
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+nav{
+    position: absolute;
+    margin: 0;
+    padding: 20px;
+    z-index: 325;
+    right: 50px;
+    width: 250px;
+}
+
+.navigation{
+    position: fixed;
+    right: -500px; 
+    width: 350px;
+    height: 100%;
+    background-color: #141414;
+    transition: 0.5s;
+    top: 7.5%;
+}
+
+.navigation.active{
+    right: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    border-bottom: 1.5px solid #323232;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+li a{
+    text-decoration: none;
+    color: #fafafa;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    padding: 10px;
+}
+
+a,button{
+    cursor: pointer;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+main{
+    position: relative;
+    height: 100%;
+}
+
+
+
+
+.infoElement{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.infoblock{
+    color: #fafafa;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+.locatie{
+    background-color: #ff2097;
+}
+
+.tijden{
+    background-color: #ff8820;
+}
+
+.feestjes{
+    background-color: #ff2097;
+}
+
