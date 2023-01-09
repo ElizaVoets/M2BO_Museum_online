@@ -6,82 +6,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
-    <script defer src="main.js"></script>
+    <script defer src="codes/main.js"></script>
     <title>M2BO museum online</title>
 </head>
 
 <body>
 
 <!-- top of the website -->
-    <div class="topofwebsite">
-        <header>
-            <img class="logo" src="/images/logoNVM.png" alt="logo van Videogame museum zoetermeer" height="5%" width="5%">
-        </header>
+    <header>
+        <img class="logo" src="/images/logoNVM.png" alt="logo van Videogame museum zoetermeer" height="50%">
+        <nav class="navigation">
+            <ul>
+                <li><a href="/index.html">homepage</a></li>
+                <li><a href="/info.html">info</a></li>
+                <li><a href="/activiteiten.html">activiteiten</a></li>
+                <li><a href="/geschiedenis.html">geschiedenis</a></li>
+            </ul>            
+        </nav>        
+        <button class="hamburger" onclick="show()">
+            <span class="bar" id="bar1"></span>
+            <span class="bar" id="bar2"></span>
+            <span class="bar" id="bar3"></span>
+        </button>
+    </header>
 
-        <!-- Navigation bar: Made by Eliza -->
-    <!--<div class="navigation">
-            <button class="hamburger" onclick="show()">
-                <div id="bar1" class="bar"></div>
-                <div id="bar2" class="bar"></div>
-                <div id="bar3" class="bar"></div>
+    <section class="bannerElement">
+        <img class="bannerImage" src="images/Eliza/10 sfeer foto's/Sfeer4.jpg" alt="Banner image">
+        <p class="bannerText">ENTERTAINMENT | EDUCATION | EXPERIENCE</p>
+        <a href="https://www.nationaalvideogamemuseum.nl/tickets">
+            <button class="tickets">
+                tickets
             </button>
-            
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/index.html" class="nav-link">homepage</a></li>
-                    <li><a href="/info.html" class="nav-link">info</a></li>
-                    <li><a href="/activiteiten.html" class="nav-link">activiteiten</a></li>
-                    <li><a href="/geschiedenis.html" class="nav-link">geschiedenis</a></li>
-                </ul>
-            </nav>
-        </div>-->
+        </a>
+    </section>
+
+        
+    <section class="infoElement">
+        <h2 class="element__title--info">info</h2>
+        <div class="imgcontainer">
+            <img src="images/Eliza/10 sfeer foto's/sfeer12.png" alt="afbeelding van het museum">
+            <img src="images/Eliza/10 sfeer foto's/Sfeer1.jpg" alt="afbeelding van het museum">
+            <img src="images/Eliza/10 sfeer foto's/Sfeer5.jpg" alt="afbeelding van het museum"> 
+        </div>
+        <div class="infoblokken">
+            <div class="infoblock locatie">
+                
+                <h3 class="InfoTitel">Locatie</h3>
+                <p>
+                    
+                </p>
+            </div>
+            <article class="infoblock tijden">
+                <h3 class="InfoTitel">Openings- en sluitingstijden</h3>
+                <br>
+                <p>Het nationaal videogame museum zoetermeer werkt met vaste tijdslots in het museum.
+                    dit betekend dat je alleen op bepaalde tijdstippen mag komen.
+                    <br><br>
+                    Daarnaast is het videogame museum zoetermeer open vanaf woensdag tot en met zondag in normale schoolweken.
+                    <br><br>
+                    Woensdag: 10.00 - 18.00 uur<br>
+                    Donderdag: 10.00 - 18.00 uur<br>
+                    Vrijdag: 10.00 - 21.00 uur<br>
+                    Zaterdag: 10.00 - 18.00 uur<br>
+                    Zondag: 12.00 - 18.00 uur
+                </p>
+            </article>
+            <div class="infoblock feestjes">
+                <h3 class="InfoTitel">Vakanties</h3>
+            </div>
+            <button class="button__infopage" onclick="">
+                Alle informatie
+            </button>
+        </div>
     </div>
 
-    <div class="main">
-        <div class="bannerElement">
+    <section class="content__element geschiedenis">
+        <h2 class="element__title--geschiedenis">geschiedenis</h2>
+        <!--<img src="images/Eliza/5 kast fotos/kast 5.jpg" alt="foto van het nationaal videogame museum" class="imgcontainer--ges">-->
+    </section>
 
-        </div>
+    <footer>
 
-        <div class="infoElement">
-            <div class="locatie">
-                <img class="InfoImg" id="ImgVoorLocatie" src="" alt="Afbeelding van het museum">
-                <div class="content">
-                    <h2>locatie</h2>
-                    <p>
-                        Het museum is gevestigd in het midden van de passage van Stadshart Zoetermeer, 
-                        op de eerste verdieping bovenaan de roltrap. Hier was voorheen de V&D gevestigd. 
-                        Openbaar vervoer: Halte stadhuis Zoetermeer
-                    </p>
-                </div>
-
-            </div>
-            <div class="tijden">
-
-                <div class="content"></div>
-            </div>
-            <div class="kinderpartijtjes">
-
-            </div>
-        </div>
-
-        <div class="geschiedenisElement">
-
-        </div>
-
-        <div class="ReviewElement">
-
-        </div>
-
-        <div class="gameElement">
-
-        </div>
-
-        <div class="contactElement">
-
-        </div>
-
-
-    </div>
+    </footer>
 </body>
 
 </html>

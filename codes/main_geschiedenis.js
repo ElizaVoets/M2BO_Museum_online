@@ -9,4 +9,3 @@ const navLinks = document.querySelectorAll('ul li a').forEach(link => {
         link.classList.add('capage');
     }
 })
-

@@ -1,37 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-html{
-    height: 100%;
-}
 
 *{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
  
+:root{
+    --background-color__main: #323232;
+    --backgound-color__secondary: #797979;
+    --header-color: #141414;
+    --main-color__text: #fafafa;
+
+    --color-palette__pink: #ff2097;
+    --color-palette__orange: #ff8820;
+    --color-palette__yellow: #fcf33d;
+}
 
 /* body */
 body{
-    background-color: #323232;
-    min-height: 100vh;
+    background-color: var(--background-color__main);
     margin: 0 auto;
-    overflow: hidden;
+    max-width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Top bar */
 header{
     position: relative;
-    background-color: #131313;
-    height: 55px;
+    background-color: var(--header-color);
+    padding: 2px;
+    z-index: 2;
+}
+
+header > img{
+    height: 50px;
+}
+
+/* navigation */
+
+nav{
+    position: sticky;
     margin: 0;
+    z-index: 1;
+    right: 50px;
+    width: 250px;
+}
+
+.navigation{
+    position: fixed;
+    right: -500px; 
+    width: 350px;
+    height: 100%;
+    background-color: var(--header-color);
+    transition: 0.5s;
+    padding: 20px;
+}
+
+.navigation.active{
+    right: 0;
+}
+
+a,button{
+    cursor: pointer;
 }
 
 .hamburger{
     display: block;
-    top: 4.25%;
-    left: 95%;
+    top: 50%;
+    right: 50px;
     width: 30px;
     height: 30px;
     transform: translateY(-50%);
@@ -40,7 +80,7 @@ header{
 }
 
 .hamburger, .bar{
-    position: fixed;
+    position: absolute;
 }
 
 .bar{
@@ -60,7 +100,7 @@ header{
 }
 
 .hamburger.open #bar1{
-    background-color: #fafafa;
+    background-color: var(--main-color__text);
     transform: rotate(45deg) translate(6px, 5px);
 }
 
@@ -69,31 +109,8 @@ header{
 }
 
 .hamburger.open #bar3{
-    background-color: #fafafa;
+    background-color: var(--main-color__text);
     transform: rotate(-45deg) translate(6px, -5px);
-}
-
-nav{
-    position: absolute;
-    margin: 0;
-    padding: 20px;
-    z-index: 325;
-    right: 50px;
-    width: 250px;
-}
-
-.navigation{
-    position: fixed;
-    right: -500px; 
-    width: 350px;
-    height: 100%;
-    background-color: #141414;
-    transition: 0.5s;
-    top: 7.5%;
-}
-
-.navigation.active{
-    right: 0;
 }
 
 ul{
@@ -101,11 +118,12 @@ ul{
 }
 
 li{
-    border-bottom: 1.5px solid #323232;
+    border-bottom: 1.5px solid var(--background-color__main);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    margin: 20px;
+    transition: 1.5s;
 }
 
 li a{
@@ -117,9 +135,30 @@ li a{
     padding: 10px;
 }
 
-a,button{
-    cursor: pointer;
+ul li a{
+    transition: 0.5s;
 }
+
+ul li a:hover{
+    font-size: 1.6em;
+    transition: 0.5s;
+    text-shadow: var(--main-color__text) 2px 2px 20px;
+}
+
+li:hover{
+    border-bottom: 1.5px solid var(--main-color__text);
+    transition: 1s;
+}
+
+ul li a.capage{
+    color: var(--color-palette__yellow);
+}
+
+li a.capage:hover{
+    text-shadow: var(--color-palette__yellow) 2px 2px 20px;
+}
+
+/* main */
 
 h2{
     display: flex;
@@ -127,43 +166,162 @@ h2{
     margin: 20px;
 }
 
-main{
+/* banner */
+.bannerElement{
     position: relative;
-    height: 100%;
+    height: 600px;
+    width: 100%;
+    background: var(--backgound-color__secondary);
+    border-bottom: solid 4px var(--main-color__text);
+    display: flex;
+    justify-content: center;
 }
 
+.bannerElement > .bannerImage{
+    position: absolute;
+    height: 125%;
+    width: 100%;
+    transform: translateY(-20%);
+}
 
+.bannerText{
+    position: absolute;
+    font-size: 2em;
+    color: var(--main-color__text);
+    text-align: center;
+    top: 40%;
+    transform: translateY(-50%);
+}
 
+.tickets{
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    height: 50px;
+    width: 150px;
+    background: transparent;
+    border: solid 2px var(--main-color__text);
+    border-radius: 10px;
+    font-size: 1em;
+    color: var(--main-color__text);
+
+    transition: .5s;
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-color__text);
+}
+
+.tickets:hover{
+    height: 55px;
+    width: 155px;
+    font-size: 1.2em;
+    border: solid 2px var(--color-palette__orange);
+    transition: 0.5s;
+    box-shadow: 0px 0px 5px 5px var(--color-palette__orange);
+    text-shadow: #ffe194 2px 0 10px;
+}
+
+/* info */
 
 .infoElement{
-    position: absolute;
-    display: flex;
+    position: relative;
     width: 100vw;
-    overflow: hidden;
-    gap: 25px;
+    height:55rem;
+}
+
+.infoElement > h2{
+    color: var(--main-color__text);
+    font-size: 2.4em;
+    padding: 5px;
+}
+
+.infoblokken{
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-.infoblock{
-    color: #fafafa;
-    width: 300px;
-    height: 300px;
+.infoElement > .infoblokken > .infoblock{
+    color: var(--main-color__text);
+    width: 375px;
+    height: 345px;
     text-align: center;
-    margin: 5px;
     padding: 10px;
+
+}
+
+.infoblock > h3{
+    font-size: 1.5em;
+}
+
+.imgcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgcontainer > img{
+    width: 375px;
+    height: 325px;
 }
 
 .locatie{
-    background-color: #ff2097;
+    background-color: var(--color-palette__orange);
 }
 
 .tijden{
-    background-color: #ff8820;
+    background-color: var(--color-palette__orange);
 }
 
 .feestjes{
-    background-color: #ff2097;
+    background-color: var(--color-palette__pink);
 }
 
+.button__infopage{
+    position: absolute;
+    bottom: 10px;
+
+    background: transparent;
+    height: 50px;
+    width: 135px;
+    border: 2px solid var(--main-color__text);
+    border-radius: 10px;
+    color: var(--main-color__text);
+    font-size: 1em;
+    transition: .5s;
+}
+
+.button__infopage:hover{
+    height: 55px;
+    width: 140px;
+    font-size: 1.1em;
+    border: solid 2px var(--colorpalette__orange);
+    transition: 0.5s;
+    box-shadow: 1px 0px 15px 10px #ff88208a;
+    text-shadow: #ffb700 1px 0 15px;
+}
+
+
+/* geschiedenis */
+.content__element--geschiedenis{
+    height: 55rem;
+    margin: 0px auto;
+    border: solid 1px var(--main-color__text);
+}
+
+.element__title--geschiedenis{
+    color: var(--main-color__text);
+    margin: 20px;
+}
+
+.geschiedenis > img{
+    width: 500px;
+    height: 500px;
+    right: 220px;
+
+}
