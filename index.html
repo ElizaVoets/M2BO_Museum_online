@@ -11,7 +11,7 @@
 <body>
 
     <!-- header en navbar -->
-    <header>
+    <header id="header">
         <img src="images/logoNVM.png" alt="logo van het museum">
         <button class="hamburger" onclick="show()">
             <span class="bar" id="bar1"></span>
@@ -20,16 +20,18 @@
         </button>
         <nav>
             <ul>
-                <li><a href="/">homepage</a></li>
-                <li><a href="/">infopage</a></li>
-                <li><a href="/">activiteiten</a></li>
-                <li><a href="/">geschiedenis</a></li>
+                <li><a href="#banner">homepage</a></li>
+                <li><a href="#info">infopage</a></li>
+                <li><a href="#geschiedenis">geschiedenis</a></li>
+                <li><a href="#game">game</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="banner_element">
-        <div class="banner"></div>      
+    <section id="banner" class="banner_element">
+        <div class="bannerpart"></div>
+        <h1>ENTERTAINMENT | EDUCATION | EXPERIENCE</h1>
+        <button class="ticketbutton">tickets</button>      
     </section>
 
 
@@ -38,7 +40,7 @@
     <div class="container">
 
         <h2>info</h2>
-        <section class="info">
+        <section id="info" class="info">
             <section class="info__section info__section--locatie">
                 <figure class="info__image info__image--locatie">
 
@@ -90,7 +92,7 @@
             
         </section>
         <!-- geschiedenis -->
-        <section class="geschiedenis">
+        <section id="geschiedenis" class="geschiedenis">
             <h2>geschiedenis</h2>
 
             <section class="geschiedenis__top">
@@ -175,8 +177,81 @@
             
         </section>
         <!-- reviews -->
-        <h2>reviews</h2>
+        <section>
+            <h2>reviews</h2>
+
+            <figure class="arrow">
+                <div class="arr arr--left"></div>
+                <div class="arr arr--right"></div>
+            </figure>
+
+            <figure class="reviewbox">
+                <div class="reviewbox__box">
+                    <div class="content">
+                        <h4>Theo van lent</h4>
+
+                        <figure class="stars">
+                            <div class="star star__black"></div>
+                            <div class="star star__black"></div>
+                            <div class="star star__black"></div>
+                            <div class="star star__black"></div>
+                            <div class="star star__black">
+                            </div>
+                        </figure>
+
+                        <p>
+                            Meer ruimte nodig voor dit leuke museum voor jong en oud!! 
+                            Veel herkenbare games en computers.Nog veel meer in opslag dus hoop op uitbreiding.
+                            Enthousiaste medewerkers die houden van wat ze doen!! Frans bedankt voor het leuke gezellige gesprek en voor alle info.
+                            Hoop gauw dat jullie ook toegang geven aan museumjaarkaart houders en dat jullie maar meer donaties mogen krijgen.</p>
+                    </div>
+                </div>
+                <div class="reviewbox__box">
+                    <div class="content">
+                        <h4>Gijs de rijn</h4>
+
+                        <figure class="stars">
+                            <div class="star star__black"></div>
+                            <div class="star star__black"></div>
+                            <div class="star star__black"></div>
+                            <div class="star star__black"></div>
+                            <div class="star star__white">
+                            </div>
+                        </figure>
+                        <p>
+                            Leuk dagje uit! 
+                            Als ouder helemaal blik om de commodore 64 floppies in je handen te hebben of lekker ouderwets te duckhunten,  
+                            maar daarna ook gewoon te eindigen op de ps5 en ondertussen alle arcade games van vroeger te spelen met je kind. 
+                            Jeetje wat een herinneringen kan je hier als ouder tastbaar overdragen aan je kind.  
+                            Echt een must do!
+                            4 sterren omdat het door corona te kort was en de horeca waardeloos beperkt is. Anders 5 sterren.</p>
+                    </div>
+                </div>
+                <div class="reviewbox__box">
+                    <div class="content">
+                        <h4>Sammy Jakobsen</h4>
+                        <figure class="stars">
+                            <div class="star star__black"></div>
+                            <div class="star star__black"></div>
+                            <div class="star star__black"></div>
+                            <div class="star star__black"></div>
+                            <div class="star star__white">
+                            </div>
+                        </figure>
+                        <p>
+                            Ik keek mijn ogen uit, 
+                            wat een super leuk museum. 
+                            Heerlijk om aan de slag te kunnen met deze games. 
+                            Het was als vroeger naar een arcadehal gaan zonder al die guldens 
+                            en dan hebben we het niet eens over de retro gameconsoles die er plenty staan. 
+                            Ik hoop dat we nog veel meer te zien krijgen</p>
+                    </div>
+                </div>
+            </figure>
+        </section>
+        
         <!-- game -->
+        <section id="game"></section>
         <h2>game</h2>
     </div>
     <!-- footer -->
