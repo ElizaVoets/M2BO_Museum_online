@@ -25,10 +25,11 @@ a:hover{
 }
 
 body{
-    min-height: 100vh;
+    height: 100vh;
     background: var(--secondary-background-color);
     font-size: 16px;
     overflow-x: hidden;
+    position: relative;
 }
 
 header{
@@ -37,6 +38,16 @@ header{
     height: 60px;
     width: 100vw;
     z-index: 5;
+}
+
+footer{
+    position: absolute;
+    background: var(--main-header-color);
+    width: 100vw;
+    height: 40px;
+    bottom: 0;
+    left: -12%;
+    margin-top: 20px;
 }
 
 
@@ -138,6 +149,22 @@ li:hover{
     background-color: var(--main-color__text);
     transform: rotate(-45deg) translate(6px, -5px);
 }
+
+.langbuttons{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.langselector{
+    width: 175px;
+    height: 100px;
+    background: transparent;
+    border: 2px solid #fafafa;
+    font-size: 110%;
+    color: var(--main-color__text);
+}
+
 
 .container{
     position: absolute;
